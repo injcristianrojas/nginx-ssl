@@ -1,9 +1,12 @@
 # NginX server for SSL/TLS configuration classes
 
 ## Intro
-As a project for educating clients and students about proper SSL/TLS
-configuration, I tried to develop this project, which includes OpenSSL 1.0.1k
-and NginX 1.9.9.
+This project is intended for educating clients and students about proper SSL/TLS
+configuration. It has been tested on Docker 1.9.1, and includes the following
+software:
+
+* OpenSSL 1.0.1k
+* NginX 1.9.9.
 
 ## Install
 
@@ -22,25 +25,35 @@ docker build -t nginx-ssl .
 
 ## Work
 
-Start server instance
+Start server instance:
 
 ```shell
 docker run --name nginx-server --rm -p 80:80 -p 443:443 nginx-ssl
 ```
 
-For shell access:
+Shell access:
 
 ```shell
 docker exec -it nginx-server /bin/bash
 ```
 
-For server restart (inside the machine):
+## Config
+
+To modify the server's SSL/TLS configuration, you can modify default.conf,
+and add/modify your ssl_* parameters. When you're done, first copy default.conf
+to the running machine like this:
 
 ```shell
-kill -HUP `cat /var/run/nginx.pid`
+docker cp default.conf nginx-server:/etc/nginx/conf.d/default.conf
 ```
 
-## Configuration Test
+Then, inside the machine, reload the server's configuration using:
+
+```shell
+nginx -s reload
+```
+
+## Test
 
 The best tool available for SSL/TLS configuration testing is
 [Qualys' SSL Test](https://www.ssllabs.com/ssltest/), but it requires the
