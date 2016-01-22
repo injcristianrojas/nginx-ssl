@@ -17,10 +17,10 @@ git clone https://github.com/injcristianrojas/nginx-ssl.git
 cd nginx-ssl
 ```
 
-Build docker machine:
+Get Docker machine:
 
 ```shell
-docker build -t nginx-ssl .
+docker pull injcristianrojas/nginx-ssl
 ```
 
 ## Work
@@ -28,7 +28,7 @@ docker build -t nginx-ssl .
 Start server instance:
 
 ```shell
-docker run --name nginx-server --rm -p 80:80 -p 443:443 nginx-ssl
+docker run --name nginx-server --rm -p 80:80 -p 443:443 injcristianrojas/nginx-ssl
 ```
 
 Shell access:
