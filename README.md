@@ -6,7 +6,7 @@ configuration. It has been tested on Docker 1.9.1, and includes the following
 software:
 
 * OpenSSL 1.0.1k
-* NginX 1.9.9.
+* NginX 1.9.9
 
 ## Install
 
