@@ -82,8 +82,8 @@ suites, cipher order, etc:
 
 ### Assess HTTPS security
 
-This task compares the server's current configuration against Mozilla's
-recommended configurations, and reports the steps to be taken to match anyone
+This task compares the server's current configuration against [Mozilla's recommended configurations](https://mozilla.github.io/server-side-tls/ssl-config-generator/),
+and reports the steps to be taken to match anyone
 of these configurations. If the server meets any of them, it reports that as
 well:
 
