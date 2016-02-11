@@ -5,8 +5,8 @@ This project is intended for educating clients and students about proper SSL/TLS
 configuration. It has been tested on Docker 1.9.1, and includes the following
 software:
 
-* OpenSSL 1.0.1k
-* NginX 1.9.9
+* OpenSSL 1.0.1e
+* NginX 1.7.12
 
 ## Install
 
