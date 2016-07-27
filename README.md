@@ -8,6 +8,11 @@ software:
 * OpenSSL 1.0.1e
 * NginX 1.7.12
 
+System requirements:
+
+* Docker 1.10.3 or higher
+* Docker Compose 1.7.1 or higher
+
 ## Install
 
 Download code:
@@ -17,18 +22,12 @@ git clone https://github.com/injcristianrojas/nginx-ssl.git
 cd nginx-ssl
 ```
 
-Get Docker machine:
-
-```shell
-docker pull injcristianrojas/nginx-ssl
-```
-
 ## Work
 
 Start server instance:
 
 ```shell
-docker run --name nginx-server --rm -p 80:80 -p 443:443 injcristianrojas/nginx-ssl
+docker compose up
 ```
 
 Shell access:
