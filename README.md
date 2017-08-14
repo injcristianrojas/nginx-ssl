@@ -39,14 +39,8 @@ docker exec -it <machine_name> /bin/bash
 ## Config
 
 To modify the server's SSL/TLS configuration, you can modify default.conf,
-and add/modify your ssl_* parameters. When you're done, first copy default.conf
-to the running machine like this:
-
-```shell
-docker cp default.conf <machine_name>:/etc/nginx/conf.d/default.conf
-```
-
-Then, inside the machine, reload the server's configuration using:
+and add/modify your ssl_* parameters. When you're done, inside the machine,
+reload the server's configuration using:
 
 ```shell
 nginx -s reload
